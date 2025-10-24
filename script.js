@@ -5680,7 +5680,7 @@ function onVirtualTourInit() {
 function onVirtualTourLoaded() {
   disposePreloader()
   tour.player.bind('click', () => {
-    postMessage('viewerClicked', '*')
+    window.parent.postMessage('viewerClicked', '*')
   })
 }
 
