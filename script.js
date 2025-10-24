@@ -5681,8 +5681,7 @@ function onVirtualTourLoaded() {
   disposePreloader()
   tour.player.bind('click', () => {
     console.log('click')
-
-    window.postMessage('viewerClicked', '*')
+    window['parent']['postMessage']('viewerClicked', '*')
   })
 }
 
